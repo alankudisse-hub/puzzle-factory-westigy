@@ -1,0 +1,23 @@
+PUZZLE FACTORY NEXUS — APK ANDROID (hors ligne)
+
+Le jeu est dans www/index.html (copie de PUZZLE_FACTORY_NEXUS_ARCADE_ATLAS_PIPES10.html).
+Tout est embarqué : aucune connexion nécessaire. Les sauvegardes (localStorage) et les imports d'atlas
+(IndexedDB) restent dans l'application sur le téléphone.
+
+MÉTHODE A — sans rien installer (GitHub, gratuit)
+1. Crée un compte sur github.com, puis un nouveau dépôt (New repository), par ex. "puzzle-factory".
+2. Clique "uploading an existing file" et glisse TOUT le contenu de ce dossier
+   (y compris le dossier .github, www, package.json, capacitor.config.json). Valide (Commit).
+   Astuce : si le dossier .github est caché, utilise GitHub Desktop ou "git push".
+3. Onglet "Actions" > "Build APK" > "Run workflow". Attends ~5 minutes.
+4. Ouvre l'exécution terminée > "Artifacts" > télécharge PuzzleFactory-APK.zip > dedans : app-debug.apk.
+5. Copie l'APK sur le téléphone, ouvre-le, autorise "installer des applis inconnues".
+
+MÉTHODE B — sur ton PC (Node 18+, Java 17, Android Studio)
+  npm install
+  npx cap add android
+  npx cap sync android
+  npx cap open android      (puis Build > Build APK)
+
+Mise à jour du jeu : remplace www/index.html, puis relance le workflow (ou "npx cap sync android").
+Attention : l'APK "debug" convient pour toi et tes testeurs. Pour le Play Store il faudra un APK/AAB signé.

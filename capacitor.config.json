@@ -1,0 +1,7 @@
+{
+  "appId": "com.westigy.puzzlefactory",
+  "appName": "Puzzle Factory Nexus",
+  "webDir": "www",
+  "backgroundColor": "#02070b",
+  "android": { "allowMixedContent": false }
+}
